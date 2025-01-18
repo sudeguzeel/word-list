@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 43, 54); /* Sayfa arka plan rengi */
+}
+
+.container {
+    text-align: center;
+    display: flex; /* flex düzen */
+    flex-direction: column; /* dikey hizalama */
+    justify-content: center; /* eşit boşluk dağılımı */
+    align-items: center; /* ortada hizala */
+    margin: 50px auto;
+    width: 450px; /* kapsayıcı genişliği */
+    height: 500px; /* kapsayıcı yüksekliği */
+    background-color: #073642; /* container arka plan rengi */
+    border-radius: 15px; /* oval kenarlı kapsayıcı */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* hafif gölge */
+}
+
+/* butonlar */
+.dikdörtgen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%; /* container genişliğinin %90'ı kadar demek */
+    height: 40px; 
+    background-color: #2aa198; /* dikdörtgen rengi */
+    border-radius: 20px; /* oval kenarlar */
+    margin: 27px 0; /* dikdörtgenler arası boşluk */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* link alt çizgisi kaldır */
+    color: white; /* yazı rengi */
+    font-size: 18px; /* yazı boyutu */
+    font-weight: bold; /* yazı kalınlığı */
+    text-align: center;
+    line-height: normal;
+}
+
+
+.dikdörtgen:hover {
+    background-color:#1c7e76; 
+}

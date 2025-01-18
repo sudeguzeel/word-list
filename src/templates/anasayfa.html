@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='anasayfa.css') }}">
+</head>
+<body>
+    <main>
+        <!-- kapsayucı div -->
+    <div class="container">
+        <a href="{{ url_for('yeni_kelime') }}" class="dikdörtgen">Yeni Kelime Girişi</a>
+        <a href="{{ url_for('girilen_kelimeler') }}" class="dikdörtgen">Kelime Kutum</a>
+        
+                                                  
+
+    </div>
+    </main>
+
+    
+    
+</body>
+</html>

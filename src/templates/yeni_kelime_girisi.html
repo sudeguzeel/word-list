@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yeni kelime girişi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #002b36; /* sayfa arka rengi */
+            color: #fdf6e3; /* yazı rengi */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* sayfa yüksekliği */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /*dik hizalaa*/
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 400px;
+            background-color: #073642; /* Kapsayıcı arka plan rengi */
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Hafif gölge */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 100%; /* Form genişliğini kapsayıcıya göre ayarla */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Elemanları yatay olarak ortala */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            align-self: flex-start; /* eiketleri sola yasla */
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%; /* genişliği kapsayıcıya göre ayarlar */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #93a1a1;
+            border-radius: 5px;
+            background-color: #fdf6e3;
+            color: #073642;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(88,110,11); /* buton rengi */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(76, 96, 4);; /* Hover durumu */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Yeni Kelime Girişi Yapın</h1>
+    <form action="/submit_kelime" method="POST">
+        <label for="kelime_kendi">Kelime: </label>
+        <input type="text" id="kelime_kendi" name="kelime_kendi" required><br><br>
+
+        <label for="kelime_anlami">Anlam: </label>
+        <input type="text" id="kelime_anlami" name="kelime_anlami" required><br><br>
+
+       
+
+        <input type="submit" value="Kelimeyi Kaydedin">
+
+    
+    </form>
+    {% if success_message %}
+    <p class="success-message">{{ success_message }}</p>
+    {% endif %}
+</div>
+</body>
+</html>
